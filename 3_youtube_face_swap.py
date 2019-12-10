@@ -79,7 +79,7 @@ def process_video(in_filename, out_filename, keep_audio=True, down_scale=2):
     # extract audio clip from src
     if keep_audio == True:
         clip = VideoFileClip(in_filename)
-        clip.audio.write_audiofile("./temp/src_audio.mp3", progress_bar=False, verbose=False)
+        clip.audio.write_audiofile("./temp/src_audio.mp3", verbose=False)
             
     # open source video
     vidcap = cv2.VideoCapture(in_filename)
@@ -119,7 +119,7 @@ def process_video(in_filename, out_filename, keep_audio=True, down_scale=2):
     # apply audio clip to generated video
     if keep_audio == True:
         video = VideoFileClip("./temp/proc_video.avi")
-        video.write_videofile(out_filename, audio="./temp/src_audio.mp3", progress_bar=False, verbose=False)
+        video.write_videofile(out_filename, audio="./temp/src_audio.mp3", verbose=False)
 
 def video_to_gif(in_filename, out_filename):
     # load clip in moviepy and save as gif
@@ -139,9 +139,9 @@ def download_video(url, start=0, stop=0):
             clip = clip.subclip(start, stop)
 
         # store clipped video in our temporary folder
-        clip.write_videofile("./temp/src_video.mp4", progress_bar=False, verbose=False)
+        clip.write_videofile("./temp/src_video.mp4", verbose=False)
         # remove original downloaded file
-        os.remove(fn)
+        # os.remove(fn)
     
     # download youtube video from url
     yt = YouTube(url)

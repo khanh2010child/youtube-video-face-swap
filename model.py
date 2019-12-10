@@ -4,7 +4,7 @@ from keras.models import Model
 from keras.layers import Input, Dense, Flatten, Reshape
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.convolutional import Conv2D
-from keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 
 from pixel_shuffler import PixelShuffler
 

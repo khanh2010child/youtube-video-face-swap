@@ -72,9 +72,9 @@ def download_video(url, start=0, stop=0):
             clip = clip.subclip(start, stop)
 
         # store clipped video in our temporary folder
-        clip.write_videofile("./temp/src_video.mp4", progress_bar=False, verbose=False)
+        clip.write_videofile("./temp/src_video.mp4", verbose=False)
         # remove original downloaded file
-        os.remove(fn)
+        # os.remove(fn)
     
     # download youtube video from url
     yt = YouTube(url)

@@ -5,7 +5,6 @@ fake_useragent
 numpy
 keras
 h5py
-cv2
 tqdm
 numpy
 pytube
@@ -14,5 +13,5 @@ face_recognition
 scikit-image
 opencv-python
 requests
-lxml.html
+lxml
 tensorflow
